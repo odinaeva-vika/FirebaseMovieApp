@@ -1,0 +1,369 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: Arimo;
+  font-display: swap;
+  src: url("../fonts/Arimo-Regular.woff2") format("woff2"), url("../fonts/Arimo-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a {
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg,
+video {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+address {
+  font-style: normal;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Arimo, sans-serif;
+  background: #181818;
+  color: #F3F6F9;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+/* Контейнер для контента который выходит за рамки стандартного контейнера*/
+
+/* .conteiner-fluid {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 10px;
+} */
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox + label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  word-wrap: break-word;
+  width: 90%;
+  font-size: 20px;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+
+.custom-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border: 1px solid #F3F6F9;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom-checkbox:checked + label::before {
+  background-color: #6532F8;
+}
+
+.custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #b3d7ff;
+}
+
+.custom-checkbox:not(:disabled):active + label::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+
+.custom-checkbox:focus + label::before {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.custom-checkbox:focus:not(:checked) + label::before {
+  border-color: #80bdff;
+}
+
+.custom-checkbox:disabled + label::before {
+  background-color: #e9ecef;
+}
+
+.header {
+  padding-top: 80px;
+}
+
+.header__inner {
+  padding-left: 78px;
+}
+
+.header__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.header__title {
+  padding: 10px 32px;
+  border-radius: 200px;
+  border: 1px solid #6532F8;
+  background: #6532F8;
+  color: #F3F6F9;
+  font-family: Arimo, sans-serif;
+  font-size: 15px;
+  letter-spacing: -0.6px;
+  text-transform: uppercase;
+}
+
+.header__year {
+  padding: 10px 32px;
+  border-radius: 200px;
+  border: 1px solid #6532F8;
+  background: #6532F8;
+  color: #F3F6F9;
+  font-family: Arimo, sans-serif;
+  font-size: 15px;
+  letter-spacing: -0.6px;
+  text-transform: uppercase;
+}
+
+.header__status {
+  padding-top: 20px;
+  padding-bottom: 45px;
+  font-family: Arimo, sans-serif;
+  font-size: 120.416px;
+  line-height: normal;
+  letter-spacing: -4.817px;
+}
+
+.main__inner {
+  padding-top: 86px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 87px;
+  border-radius: 20px;
+  background: #232323;
+}
+
+.input {
+  display: block;
+  border-bottom: 1px solid #5c5a5a;
+  font-size: 30px;
+  line-height: normal;
+  letter-spacing: -0.6px;
+}
+
+.btn {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: #6532F8;
+}
+
+.box-input {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.output {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3px 0;
+}
+
+.output div {
+  padding: 29px 20px 28px 20px;
+  border-radius: 10px;
+  background: #3A3939;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.checked {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.box__button {
+  background-image: url("../img/clear.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 778px) {
+  .header__status {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 635px) {
+  .box-input {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
